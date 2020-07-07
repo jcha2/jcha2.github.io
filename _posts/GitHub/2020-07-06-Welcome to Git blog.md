@@ -3,11 +3,11 @@ layout:
 post
 title:  "Welcome to Git blog "
 
-subtitle: "Git"
+subtitle: ""
 
 date:   2020-07-06 14:21:00
 
-categories: [Git]
+categories: [GitHub]
 
 ---
 
