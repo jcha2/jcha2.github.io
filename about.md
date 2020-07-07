@@ -11,4 +11,5 @@ main_nav: true
 : jcha2@naver.com
 : ckwlgjs97@gmail.com
 >B.S. in Computer Science at Sungshin Women's University 
->>>M.S. Candidate in Computer Science at Hanyang University
+
+>M.S. Candidate in Computer Science at Hanyang University

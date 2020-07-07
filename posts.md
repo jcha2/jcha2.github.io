@@ -9,10 +9,7 @@ main_nav: true
   {% capture cat %}{{ category | first }}{% endcapture %}
   <h2 id="{{cat}}">{{ cat | capitalize }}</h2>
   {% for desc in site.descriptions %}
-    {% if desc.cat == cat %}
-      <p class="desc">
-<em>{{ desc.desc }}</em>
-</p>
+    {% if desc.cat == cat %} <p>{{ desc.desc }}</p>
     {% endif %}
   {% endfor %}
   <ul class="posts-list">
