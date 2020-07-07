@@ -22,7 +22,7 @@ description: >
 baseurl:
 url: "http://jcha2.github.io" # the base hostname & protocol for your site
 cover: "/assets/header_image.JPG"
-logo: "/assets/logo.png"
+logo: "/assets/logo.jpg"
 
 
 # Build settings
