@@ -21,7 +21,7 @@ description: >
 # root of your server.
 baseurl:
 url: "http://jcha2.github.io" # the base hostname & protocol for your site
-cover: "/assets/header_image.JPG"
+cover: "/assets/header_image.jpg"
 logo: "/assets/logo.jpg"
 
 
@@ -63,6 +63,8 @@ descriptions:
   - cat: Data Structure
     desc: "datastructure description."
   - cat: Coding Practice
+    desc: "."
+  - cat: Git
     desc: "."
 
 # Social icons and sharing options
