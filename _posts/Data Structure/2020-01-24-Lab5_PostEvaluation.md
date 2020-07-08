@@ -1,14 +1,11 @@
-
 ---
 layout: post
-post
-title:  "Lab5 - Postorder Evaluation"
-
-date:   2020-01-24 14:21:00
-
+title:  "Lab5 - Post Evaluation"
+date:   2020-01-24 14:21:10
 author: Jihun Cha
 categories: Data Structure
 ---
+
 ### Postorder Evaluation
 ~~~package lab5;
 
@@ -21,12 +18,12 @@ public class PostEvaluation {
 		ArrayList<String> key = new ArrayList<String>();
 		int top;
 
-		void push(String newKey) { // ¹è¿­ÀÇ ¸¶Áö¸·À¸·Î »ğÀÔ
+		void push(String newKey) { // ë°°ì—´ì˜ ë§ˆì§€ë§‰ìœ¼ë¡œ ì‚½ì…
 			key.add(newKey);
 			top = key.indexOf(newKey);
 		}
 
-		String pop() { // ¸¶Áö¸· ¿ä¼Ò ²¨³»°í ¸®ÅÏ, »èÁ¦
+		String pop() { // ë§ˆì§€ë§‰ ìš”ì†Œ êº¼ë‚´ê³  ë¦¬í„´, ì‚­ì œ
 			String returnStr = key.get(top);
 			key.remove(top--);
 			return returnStr;
@@ -41,13 +38,13 @@ public class PostEvaluation {
 		for (int i = 0; i < arr.length; i++) {
 			char arrChar = arr[i].charAt(0);
 
-			if (arrChar > 47 && arrChar <= 57) { // ¼ıÀÚ ¸¸³ª¸é push
+			if (arrChar > 47 && arrChar <= 57) { // ìˆ«ì ë§Œë‚˜ë©´ push
 				st.push(arr[i]);
-			} else { // ¿¬»êÀÚÀÇ °æ¿ì ¼ıÀÚ µÎ °³ ²¨³»¿© ¿¬»ê ÁøÇà
+			} else { // ì—°ì‚°ìì˜ ê²½ìš° ìˆ«ì ë‘ ê°œ êº¼ë‚´ì—¬ ì—°ì‚° ì§„í–‰
 				int op1 = Integer.parseInt(st.pop());
 				int op2 = Integer.parseInt(st.pop());
 
-				switch (arr[i]) { // op2 ¿Í op1ÀÇ ÀÚ¸®°¡ ¹Ù²î¾î¾ß ÇÏ¹Ç·Î ÁÖÀÇ
+				switch (arr[i]) { // op2 ì™€ op1ì˜ ìë¦¬ê°€ ë°”ë€Œì–´ì•¼ í•˜ë¯€ë¡œ ì£¼ì˜
 				case "*":
 					result = op2 * op1;
 					st.push(Integer.toString(result));
@@ -84,7 +81,7 @@ public class PostEvaluation {
 		BufferedReader br = new BufferedReader(new FileReader("expr_input.txt"));
 
 		String expr = br.readLine().trim();
-		expr = expr.substring(0, expr.length() - 1); // # Á¦°Å
+		expr = expr.substring(0, expr.length() - 1); // # ì œê±°
 		System.out.println("converted postfix form : " + expr);
 
 		System.out.print("evaluation result : " + Evaluate(expr));
