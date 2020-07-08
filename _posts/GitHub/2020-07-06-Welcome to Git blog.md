@@ -1,10 +1,7 @@
-﻿---
+---
 layout: post
-post
-title:  "Welcome to my Git blog "
-
-date:   2020-07-06 14:21:00
-
+title:  "Welcome to my Git blog"
+date:   2020-01-24 14:21:00
 author: Jihun Cha
 categories: GitHub
 ---
