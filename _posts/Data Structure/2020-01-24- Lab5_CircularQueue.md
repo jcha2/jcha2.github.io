@@ -8,7 +8,8 @@ categories: DataStructure
 
 ###Circular Queue
 
-~~~package lab5;
+~~~
+package lab5;
 
 import java.io.*;
 
@@ -112,4 +113,5 @@ public class CircularQueue {
 		br.close();
 
 	}
-}~~~
+}
+~~~
