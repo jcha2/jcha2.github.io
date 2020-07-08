@@ -3,7 +3,7 @@ layout: post
 title:  "Lab5 - Post Evaluation"
 date:   2020-01-24 14:21:10
 author: Jihun Cha
-categories: Data Structure
+categories: DataStructure
 ---
 
 ### Postorder Evaluation
