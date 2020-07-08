@@ -1,4 +1,15 @@
-package lab4;
+---
+layout: post
+post
+title:  "Lab4 - Inorder To Postorder"
+date:   2020-01-23 14:21:00
+
+author: Jihun Cha
+categories: Data Structure
+---
+###Inorder To Postorder
+
+~~~package lab4;
 
 import java.io.*;
 import java.util.*;;
@@ -92,4 +103,4 @@ public class InToPost {
 		br.close();
 	}
 
-}
+}~~~

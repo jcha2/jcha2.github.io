@@ -1,14 +1,12 @@
 ﻿---
-layout: 
+layout: post
 post
-title:  "Welcome to Git blog "
-
-subtitle: ""
+title:  "Welcome to my Git blog "
 
 date:   2020-07-06 14:21:00
 
-categories: [GitHub]
-
+author: Jihun Cha
+categories: GitHub
 ---
 
 

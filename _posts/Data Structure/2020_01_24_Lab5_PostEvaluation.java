@@ -1,4 +1,16 @@
-package lab5;
+
+---
+layout: post
+post
+title:  "Lab5 - Postorder Evaluation"
+
+date:   2020-01-24 14:21:00
+
+author: Jihun Cha
+categories: Data Structure
+---
+### Postorder Evaluation
+~~~package lab5;
 
 import java.io.*;
 import java.util.*;

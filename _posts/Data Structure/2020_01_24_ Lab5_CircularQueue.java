@@ -1,4 +1,15 @@
-package lab5;
+---
+layout: post
+post
+title:  "Lab5 - Circular Queue"
+date:   2020-01-24 14:21:00
+
+author: Jihun Cha
+categories: Data Structure
+---
+###Circular Queue
+
+~~~package lab5;
 
 import java.io.*;
 
@@ -102,4 +113,4 @@ public class CircularQueue {
 		br.close();
 
 	}
-}
+}~~~
