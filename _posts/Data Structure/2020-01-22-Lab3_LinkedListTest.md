@@ -1,35 +1,33 @@
-
 ---
 layout: post
 post
 title:  "Lab3 - LinkedListTest"
-
 date:   2020-01-22 14:21:00
-
 author: Jihun Cha
 categories: Data Structure
 ---
+
 ###LinkedListTest
 
 ~~~package lab3;
 
 import java.io.*;
 
-class Node { // ¸®½ºÆ®ÀÇ ³ëµå °´Ã¼ »ı¼º
+class Node { // ë¦¬ìŠ¤íŠ¸ì˜ ë…¸ë“œ ê°ì²´ ìƒì„±
 	int studentId;
 	String studentName;
 	Node next;
 }
 
-class List { // ¸®½ºÆ® »ı¼º
+class List { // ë¦¬ìŠ¤íŠ¸ ìƒì„±
 	Node first;
 
 	List() {
-		first = null; // Çì´õ ¿ªÇÒ. first
+		first = null; // í—¤ë” ì—­í• . first
 	}
 }
 
-public class LinkedListTest { // ¸ŞÀÎ & ¸Ş¼­µå
+public class LinkedListTest { // ë©”ì¸ & ë©”ì„œë“œ
 
 	public static void main(String args[]) throws IOException {
 		BufferedReader br = new BufferedReader(new FileReader("lab3_input.txt"));
@@ -40,9 +38,9 @@ public class LinkedListTest { // ¸ŞÀÎ & ¸Ş¼­µå
 		while ((line = br.readLine()) != null) {
 			String student[] = line.split(" ");
 			Node newNode = new Node();
-			if (student.length > 1) { // ÇĞ»ı Ãß°¡, »èÁ¦ÀÇ °æ¿ì id¸¦ Ãß°¡·Î ¹Ş¾Æ¿Í¾ß ÇÔ
+			if (student.length > 1) { // í•™ìƒ ì¶”ê°€, ì‚­ì œì˜ ê²½ìš° idë¥¼ ì¶”ê°€ë¡œ ë°›ì•„ì™€ì•¼ í•¨
 				newNode.studentId = Integer.parseInt(student[1]);
-				if (student.length > 2) { // Ãß°¡ÀÇ °æ¿ì¿¡´Â name±îÁö ¹Ş¾Æ¿Í¾ß ÇÔ
+				if (student.length > 2) { // ì¶”ê°€ì˜ ê²½ìš°ì—ëŠ” nameê¹Œì§€ ë°›ì•„ì™€ì•¼ í•¨
 					newNode.studentName = student[2] + " " + student[3];
 				}
 			}
@@ -63,7 +61,7 @@ public class LinkedListTest { // ¸ŞÀÎ & ¸Ş¼­µå
 
 	}
 
-	static void DeleteList(List list) { // ¸®½ºÆ® »èÁ¦
+	static void DeleteList(List list) { // ë¦¬ìŠ¤íŠ¸ ì‚­ì œ
 		if (!IsEmpty(list)) {
 			list.first = null;
 		}
@@ -81,17 +79,17 @@ public class LinkedListTest { // ¸ŞÀÎ & ¸Ş¼­µå
 		return false;
 	}
 
-	static void Delete(Node node, List list) { // ³ëµå »èÁ¦
+	static void Delete(Node node, List list) { // ë…¸ë“œ ì‚­ì œ
 		if (Find(node, list) > 0) {
 			Node temp = list.first;
 
-			while (temp.next != null) { // ³ëµåÀÇ ´ÙÀ½ÀÌ nullÀÌ µÉ ¶§ Áß´ÜµÊ
+			while (temp.next != null) { // ë…¸ë“œì˜ ë‹¤ìŒì´ nullì´ ë  ë•Œ ì¤‘ë‹¨ë¨
 				Node left = temp;
 				Node right = left.next;
 
-				if (right.studentId == node.studentId) { // ¸¸¾à ´ÙÀ½ ³ëµå°¡ »èÁ¦ÇÒ ³ëµå¶ó¸é
-					left.next = right.next; // Çö ³ëµåÀÇ ´ÙÀ½ ³ëµå¸¦ ´Ù´ÙÀ½ ³ëµå·Î ¼³Á¤ÇÏ°í
-					right.next = null; // ´ÙÀ½ ³ëµå´Â null·Î ¼³Á¤ÇÑ´Ù (»èÁ¦)
+				if (right.studentId == node.studentId) { // ë§Œì•½ ë‹¤ìŒ ë…¸ë“œê°€ ì‚­ì œí•  ë…¸ë“œë¼ë©´
+					left.next = right.next; // í˜„ ë…¸ë“œì˜ ë‹¤ìŒ ë…¸ë“œë¥¼ ë‹¤ë‹¤ìŒ ë…¸ë“œë¡œ ì„¤ì •í•˜ê³ 
+					right.next = null; // ë‹¤ìŒ ë…¸ë“œëŠ” nullë¡œ ì„¤ì •í•œë‹¤ (ì‚­ì œ)
 				}
 				temp = temp.next;
 			}
@@ -99,14 +97,14 @@ public class LinkedListTest { // ¸ŞÀÎ & ¸Ş¼­µå
 			System.out.print("Current List> ");
 			Print(list);
 
-		} else // ÇØ´ç student ¾øÀ½, »èÁ¦ ºÒ°¡
+		} else // í•´ë‹¹ student ì—†ìŒ, ì‚­ì œ ë¶ˆê°€
 			System.out.println("Deletion Failed : element " + node.studentId + " is not in the list.");
 	}
 
 	static int Find(Node node, List list) {
 		Node temp = list.first;
 
-		while (temp != null) { // while·Î Âß µ¹¸é¼­ id °°À¸¸é 1 return
+		while (temp != null) { // whileë¡œ ì­‰ ëŒë©´ì„œ id ê°™ìœ¼ë©´ 1 return
 			if (temp.studentId == node.studentId) {
 				return node.studentId;
 			}
@@ -118,35 +116,35 @@ public class LinkedListTest { // ¸ŞÀÎ & ¸Ş¼­µå
 
 	static void Insert(Node newNode, List list) {
 
-		if (Find(newNode, list) == 0) { // ¸®½ºÆ®¿¡ ÇØ´ç ÇĞ¹ø ¾øÀ» °æ¿ì¿¡
+		if (Find(newNode, list) == 0) { // ë¦¬ìŠ¤íŠ¸ì— í•´ë‹¹ í•™ë²ˆ ì—†ì„ ê²½ìš°ì—
 			Node temp = list.first;
 
-			if (list.first == null) { // ºñ¾îÀÖ´Â ¸®½ºÆ®ÀÏ °æ¿ì Ã¹ ³ëµå·Î Ãß°¡
+			if (list.first == null) { // ë¹„ì–´ìˆëŠ” ë¦¬ìŠ¤íŠ¸ì¼ ê²½ìš° ì²« ë…¸ë“œë¡œ ì¶”ê°€
 				list.first = newNode;
 				System.out.println("Insertion Success : " + newNode.studentId);
 				System.out.print("Current List> ");
 				Print(list);
-			} else if (temp.studentId > newNode.studentId) { // Ã¹ ³ëµåº¸´Ù °ªÀÌ ÀÛÀ» °æ¿ì¿¡ ¸®½ºÆ®ÀÇ Ã¹ ³ëµå·Î Ãß°¡ÇØ¾ß ÇÔ
+			} else if (temp.studentId > newNode.studentId) { // ì²« ë…¸ë“œë³´ë‹¤ ê°’ì´ ì‘ì„ ê²½ìš°ì— ë¦¬ìŠ¤íŠ¸ì˜ ì²« ë…¸ë“œë¡œ ì¶”ê°€í•´ì•¼ í•¨
 				list.first = newNode;
 				newNode.next = temp;
 				System.out.println("Insertion Success : " + newNode.studentId);
 				System.out.print("Current List> ");
 				Print(list);
-			} else { // ¸®½ºÆ®ÀÇ Ã¹ ºÎºĞ¿¡ µé¾î°¡´Â °Å ¾Æ´Ò °æ¿ì¿¡
-				while (temp.next != null) { // ÀÚ¸® Ã£Àº °æ¿ì
+			} else { // ë¦¬ìŠ¤íŠ¸ì˜ ì²« ë¶€ë¶„ì— ë“¤ì–´ê°€ëŠ” ê±° ì•„ë‹ ê²½ìš°ì—
+				while (temp.next != null) { // ìë¦¬ ì°¾ì€ ê²½ìš°
 					if (temp.studentId < newNode.studentId && temp.next.studentId > newNode.studentId) {
 						Node left = temp;
 						Node right = temp.next;
 						left.next = newNode;
 						newNode.next = right;
-// ¿ŞÂÊ ³ëµåleft¿Í ¿À¸¥ÂÊ ³ëµåright °¢°¢ Àâ¾Æ¼­ left.next°¡ newNode¸¦ °¡¸®Å°°Ô ÇÏ°í
-// newNode.nextÀ» right·Î ¼³Á¤ÇÏ¸é insert ¿Ï·á
+// ì™¼ìª½ ë…¸ë“œleftì™€ ì˜¤ë¥¸ìª½ ë…¸ë“œright ê°ê° ì¡ì•„ì„œ left.nextê°€ newNodeë¥¼ ê°€ë¦¬í‚¤ê²Œ í•˜ê³ 
+// newNode.nextì„ rightë¡œ ì„¤ì •í•˜ë©´ insert ì™„ë£Œ
 						System.out.println("Insertion Success : " + newNode.studentId);
 						System.out.print("Current List> ");
 						Print(list);
 						break;
 					}
-					temp = temp.next; // ¸®½ºÆ®ÀÇ ¸¶Áö¸·¿¡ insert ÇÏ´Â °æ¿ì
+					temp = temp.next; // ë¦¬ìŠ¤íŠ¸ì˜ ë§ˆì§€ë§‰ì— insert í•˜ëŠ” ê²½ìš°
 					if (temp.next == null) {
 						Node left = temp;
 						left.next = newNode;
@@ -159,7 +157,7 @@ public class LinkedListTest { // ¸ŞÀÎ & ¸Ş¼­µå
 
 				}
 			}
-		} else // ÇĞ¹ø ÀÌ¹Ì Á¸Àç. insert ºÒ°¡
+		} else // í•™ë²ˆ ì´ë¯¸ ì¡´ì¬. insert ë¶ˆê°€
 			System.out.println("Insertion Failed : element " + newNode.studentId + " is already in the list.");
 
 	}
