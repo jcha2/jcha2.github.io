@@ -7,7 +7,8 @@ categories: DataStructure
 ---
 
 ### Postorder Evaluation
-~~~package lab5;
+~~~
+package lab5;
 
 import java.io.*;
 import java.util.*;
@@ -89,3 +90,4 @@ public class PostEvaluation {
 		br.close();
 	}
 }
+~~~
