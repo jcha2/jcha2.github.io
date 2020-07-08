@@ -1,9 +1,7 @@
 ---
 layout: post
-post
-title:  "Lab4 - Inorder To Postorder"
+title:  "Lab4 - Inorder to Postorder"
 date:   2020-01-23 14:21:00
-
 author: Jihun Cha
 categories: Data Structure
 ---
@@ -16,19 +14,19 @@ import java.util.*;;
 
 public class InToPost {
 
-	private static class Stack { // ¹è¿­·Î stack ±¸Çö
+	private static class Stack { // ë°°ì—´ë¡œ stack êµ¬í˜„
 		ArrayList<String> key = new ArrayList<String>();
-		int top; // ¹è¿­ÀÇ ¸¶Áö¸· ºÎºĞÀÌ topÀ¸·Î ÀÛ¿ë
+		int top; // ë°°ì—´ì˜ ë§ˆì§€ë§‰ ë¶€ë¶„ì´ topìœ¼ë¡œ ì‘ìš©
 
-		void push(String newKey) { // ¹è¿­ÀÇ ¸¶Áö¸·À¸·Î »ğÀÔ
+		void push(String newKey) { // ë°°ì—´ì˜ ë§ˆì§€ë§‰ìœ¼ë¡œ ì‚½ì…
 			key.add(newKey);
 			top = key.indexOf(newKey);
 		}
 
-		void pop() { // ¸¶Áö¸· ¿ä¼Ò ²¨³»°í Ãâ·Â ÈÄ »èÁ¦
-			if (key.get(top).equals("(")) { // ¿­¸° °ıÈ£´Â Ãâ·ÂÇÏÁö ¾Ê°í »èÁ¦
+		void pop() { // ë§ˆì§€ë§‰ ìš”ì†Œ êº¼ë‚´ê³  ì¶œë ¥ í›„ ì‚­ì œ
+			if (key.get(top).equals("(")) { // ì—´ë¦° ê´„í˜¸ëŠ” ì¶œë ¥í•˜ì§€ ì•Šê³  ì‚­ì œ
 				key.remove(top--);
-			} else { // ³ª¸ÓÁöÀÇ °æ¿ì Ãâ·Â ÈÄ »èÁ¦
+			} else { // ë‚˜ë¨¸ì§€ì˜ ê²½ìš° ì¶œë ¥ í›„ ì‚­ì œ
 				System.out.print(key.get(top));
 				key.remove(top--);
 			}
@@ -44,25 +42,25 @@ public class InToPost {
 		for (int i = 0; i < arr.length; i++) {
 			char arrChar = arr[i].charAt(0);
 
-			if (arrChar > 47 && arrChar <= 57) { // ASCII »ç¿ë, ¼ıÀÚÀÎ °æ¿ì
+			if (arrChar > 47 && arrChar <= 57) { // ASCII ì‚¬ìš©, ìˆ«ìì¸ ê²½ìš°
 				System.out.print(arr[i]);
-			} else { // ±âÈ£ÀÎ °æ¿ì
-				if (st.key.isEmpty()) { // ºó ½ºÅÃÀÎ °æ¿ì ¹«Á¶°Ç push
+			} else { // ê¸°í˜¸ì¸ ê²½ìš°
+				if (st.key.isEmpty()) { // ë¹ˆ ìŠ¤íƒì¸ ê²½ìš° ë¬´ì¡°ê±´ push
 					st.push(arr[i]);
-				} else { // ºñ¾îÀÖÁö ¾ÊÀº ½ºÅÃ
+				} else { // ë¹„ì–´ìˆì§€ ì•Šì€ ìŠ¤íƒ
 					String topStr = st.key.get(st.top);
 					char topChar = topStr.charAt(0);
 
-					if (arrChar == 41) { // ´İÈù °ıÈ£ ¸¸³­ °æ¿ì
-						while (st.key.contains("(")) // ¿­¸° °ıÈ£±îÁö pop
+					if (arrChar == 41) { // ë‹«íŒ ê´„í˜¸ ë§Œë‚œ ê²½ìš°
+						while (st.key.contains("(")) // ì—´ë¦° ê´„í˜¸ê¹Œì§€ pop
 							st.pop();
 						continue;
 					}
-					if (arrChar == 40) { // ¿­¸° °ıÈ£ÀÇ °æ¿ì ¹«Á¶°Ç push
+					if (arrChar == 40) { // ì—´ë¦° ê´„í˜¸ì˜ ê²½ìš° ë¬´ì¡°ê±´ push
 						st.push(arr[i]);
 						continue;
 					}
-					if (Precedence(topChar) >= Precedence(arrChar)) { // °¡ÁßÄ¡ °í·ÁÇÏ¿© pop & push È¤Àº push
+					if (Precedence(topChar) >= Precedence(arrChar)) { // ê°€ì¤‘ì¹˜ ê³ ë ¤í•˜ì—¬ pop & push í˜¹ì€ push
 						st.pop();
 						st.push(arr[i]);
 					} else
@@ -84,7 +82,7 @@ public class InToPost {
 		case 43: // +, -
 		case 45:
 			return 1;
-		default: // °ıÈ£
+		default: // ê´„í˜¸
 			return 0;
 		}
 	}
