@@ -61,14 +61,14 @@ descriptions:
   - cat: Algorithm
     desc: ""
 
-  - cat: Data Structure
+  - cat: DataStructure
     desc: ""
 
-  - cat: Coding Practice
+  - cat: CodingPractice
     desc: ""
 
   - cat: GitHub
-    desc: "git"
+    desc: ""
 
 # Social icons and sharing options
 #
