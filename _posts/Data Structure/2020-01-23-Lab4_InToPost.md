@@ -7,7 +7,8 @@ categories: DataStructure
 ---
 ###Inorder To Postorder
 
-~~~package lab4;
+~~~
+package lab4;
 
 import java.io.*;
 import java.util.*;;
@@ -101,4 +102,5 @@ public class InToPost {
 		br.close();
 	}
 
-}~~~
+}
+~~~
