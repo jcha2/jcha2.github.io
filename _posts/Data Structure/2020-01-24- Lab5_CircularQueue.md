@@ -1,12 +1,11 @@
 ---
 layout: post
-post
 title:  "Lab5 - Circular Queue"
 date:   2020-01-24 14:21:00
-
 author: Jihun Cha
 categories: Data Structure
 ---
+
 ###Circular Queue
 
 ~~~package lab5;
@@ -16,7 +15,7 @@ import java.io.*;
 public class CircularQueue {
 
 	private int[] key;
-	// ¿øÇü Å¥ÀÌ¹Ç·Î ÀÌÈÄ ¿¬»ê¿¡ front³ª rear °ª ¼³Á¤ ½Ã % cq.max_qsize ÇØÁà¾ß ÇÔ.
+	// ì›í˜• íì´ë¯€ë¡œ ì´í›„ ì—°ì‚°ì— frontë‚˜ rear ê°’ ì„¤ì • ì‹œ % cq.max_qsize í•´ì¤˜ì•¼ í•¨.
 	private int front;
 	private int rear;
 	private int qsize;
@@ -29,7 +28,7 @@ public class CircularQueue {
 		max_qsize = 0;
 	}
 
-	public static CircularQueue CreateCircularQ(int max) { // Å¥ »ı¼º
+	public static CircularQueue CreateCircularQ(int max) { // í ìƒì„±
 		CircularQueue cq = new CircularQueue();
 		cq.key = new int[max];
 		cq.max_qsize = max;
@@ -51,7 +50,7 @@ public class CircularQueue {
 		return false;
 	}
 
-	public static void Dequeue(CircularQueue cq) { // front ¿¡¼­ delete
+	public static void Dequeue(CircularQueue cq) { // front ì—ì„œ delete
 		if (IsEmpty(cq)) {
 			System.out.println("Not Deleted : queue is empty.");
 		} else {
@@ -72,11 +71,11 @@ public class CircularQueue {
 	}
 
 	public static void PrintFirst(CircularQueue cq) {
-		System.out.println("front À§Ä¡ : " + cq.front % cq.max_qsize + ", °ª : " + cq.key[cq.front % cq.max_qsize]);
+		System.out.println("front ìœ„ì¹˜ : " + cq.front % cq.max_qsize + ", ê°’ : " + cq.key[cq.front % cq.max_qsize]);
 	}
 
 	public static void PrintRear(CircularQueue cq) {
-		System.out.println("rear À§Ä¡ : " + cq.rear % cq.max_qsize + ", °ª : " + cq.key[cq.rear % cq.max_qsize]);
+		System.out.println("rear ìœ„ì¹˜ : " + cq.rear % cq.max_qsize + ", ê°’ : " + cq.key[cq.rear % cq.max_qsize]);
 	}
 
 	void MakeEmpty(CircularQueue cq) {
