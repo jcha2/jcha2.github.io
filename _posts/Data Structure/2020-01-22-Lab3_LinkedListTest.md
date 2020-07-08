@@ -8,7 +8,8 @@ categories: DataStructure
 
 ###LinkedListTest
 
-~~~package lab3;
+~~~
+package lab3;
 
 import java.io.*;
 
@@ -170,4 +171,5 @@ public class LinkedListTest { // 메인 & 메서드
 		System.out.println();
 	}
 
-}~~~
+}
+~~~
