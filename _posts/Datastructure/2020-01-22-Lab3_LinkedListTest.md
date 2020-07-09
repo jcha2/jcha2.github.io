@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title:  "Lab3 - LinkedListTest"
 date:   2020-01-22 14:21:00
@@ -7,7 +7,6 @@ categories: Datastructure
 ---
 
 ###LinkedListTest
-
 ~~~
 package lab3;
 
