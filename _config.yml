@@ -57,11 +57,11 @@ jekyll-archives:
 descriptions:
     - cat: Bioinformatics
     
-    - cat: DataStructure  
+    - cat: Datastructure  
    
     - cat: Algorithms
     
-    - cat: GitHub
+    - cat: Github
 
 # Social icons and sharing options
 #
