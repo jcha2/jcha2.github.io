@@ -5,8 +5,7 @@ date:   2020-01-23 14:21:00
 author: Jihun Cha
 categories: Datastructure
 ---
-
-###Inorder To Postorder###
+### Inorder to Postorder
 ~~~
 package lab4;
 
