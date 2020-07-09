@@ -3,7 +3,7 @@ layout: post
 title:  "Lab4 - Inorder to Postorder"
 date:   2020-01-23 14:21:00
 author: Jihun Cha
-categories: DataStructure
+categories: Datastructure
 ---
 ###Inorder To Postorder
 
