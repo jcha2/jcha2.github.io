@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title:  "Lab5 - Circular Queue"
 date:   2020-01-24 14:21:00
@@ -6,7 +6,7 @@ author: Jihun Cha
 categories: Datastructure
 ---
 
-###Circular Queue
+### Circular Queue
 ~~~
 package lab5;
 
