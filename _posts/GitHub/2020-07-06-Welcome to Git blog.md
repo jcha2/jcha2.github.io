@@ -8,16 +8,16 @@ categories: Github
 
 
 
-##Welcome to Git blog
-####Welcome to Git blog
+## Welcome to Git blog
+#### Welcome to Git blog 
 → Welcome to Git blog
 
 
 
 
 
-###1. Welcome to Git blog
->Welcome to Git blog
+### 1. Welcome to Git blog
+> Welcome to Git blog
 >
 
 <br>
